@@ -10,14 +10,10 @@ class App extends Component {
 
   }
 
-  changeUsername(newName) {
-
-  }
-
   render() {
     return (
       <div className="container">
-        <Main changeUsername={this.changeUsername.bind(this)} />
+        <Main changeUsername={() => this.props.setName("Anna")} />
         <User username={this.props.user.name}/>
       </div>
     );
