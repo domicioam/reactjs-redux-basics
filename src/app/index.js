@@ -62,10 +62,8 @@ const myLogger = (store) => (next) => (action) => {
 }
 
 const store = createStore(
-  combineReducers({
-    mathReducer,
-    userReducer
-  }), {},
+  combineReducers({ mathReducer, userReducer }),
+  {},
   applyMiddleware(logger())
 );
 
